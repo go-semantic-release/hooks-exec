@@ -11,7 +11,7 @@ Use this plugin by enabling it via `--hooks exec`.
 ## Configuration
 There are two possible scripts that can be executed during the release process: (i) the success script, if the release was successful, and (ii) the no release script, if the was not created for a specific reason.
 
-The scripts are configured via the `--hooks-opts exec_on_success="echo v{{.NewRelease.Version}} "` and `--hooks-opts exec_no_release= echo {{.Reason}}` flags. Additionally, they `.semrelrc` file can be used to configure the scripts:
+The scripts are configured via the `--hooks-opt exec_on_success="echo v{{.NewRelease.Version}} "` and `--hooks-opt exec_on_no_release="echo {{.Reason}}"` flags. Additionally, they `.semrelrc` file can be used to configure the scripts:
 ```json
 {
   "plugins": {
